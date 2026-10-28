@@ -34,7 +34,7 @@ inputs:
     description: >
       sinistral-cli version to use. Accepts any git ref (branch, tag, SHA) from
       https://github.com/stacklet/sinistral-cli.
-    default: 'dbefcee8c50ad4300be1236e10dc613bd9c2f3dc' # v0.5.38
+    default: '68dd15204e440e05f88b761242c4b264efa7038d' # v0.5.39.1
   post_pr_comment:
     required: false
     description: Whether to post scan results as a PR comment.
@@ -69,7 +69,7 @@ runs:
 
     - name: Install uv
       if: steps.changes.outputs.should_scan == 'true'
-      uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+      uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
       with:
         enable-cache: true
 
